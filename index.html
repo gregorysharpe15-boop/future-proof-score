@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A 2-minute self-check for men 45-65. Score your strength, mobility, balance, engine and recovery, and find out where to start.">
+<style>[hidden]{display:none!important}body{margin:0}</style>
+<title>Future-Proof Score</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: single narrow column, one question per screen, like a coach's assessment card. */
+:root{
+  --bg:#eef1f4; --surface:#ffffff; --ink:#15202b; --muted:#5b6876; --line:#d5dbe2;
+  --accent:#e2621b; --accent-ink:#ffffff; --steel:#2f4a63;
+  --good:#2e8a57; --warn:#c98a12; --bad:#c2412d;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f161d; --surface:#18222c; --ink:#e8edf2; --muted:#9aa8b6; --line:#2a3846;
+  --accent:#f07a35; --accent-ink:#14100c; --steel:#8fb1cf;
+  --good:#55b882; --warn:#e2ac3c; --bad:#e46a55; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f161d; --surface:#18222c; --ink:#e8edf2; --muted:#9aa8b6; --line:#2a3846;
+  --accent:#f07a35; --accent-ink:#14100c; --steel:#8fb1cf;
+  --good:#55b882; --warn:#e2ac3c; --bad:#e46a55; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.5;padding:0 16px}
+.wrap{max-width:620px;margin:0 auto;padding-block:32px 48px;display:flex;flex-direction:column;gap:20px}
+.brand{font-family:var(--display);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:14px;color:var(--steel)}
+h1,h2{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:.95;margin:0;text-wrap:balance}
+h1{font-size:clamp(46px,11vw,72px)}
+h2{font-size:clamp(28px,6.5vw,38px)}
+h1 span{color:var(--accent)}
+p{margin:0}
+.lede{font-size:19px;color:var(--muted);max-width:52ch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:24px;display:flex;flex-direction:column;gap:18px}
+.pillars{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.pillars li{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:15px;padding:4px 10px;border:1px solid var(--line);border-radius:3px;color:var(--steel)}
+.btn{font:700 18px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;background:var(--accent);color:var(--accent-ink);border:0;border-radius:4px;padding:16px 22px;cursor:pointer;align-self:flex-start}
+.btn:hover{filter:brightness(1.07)}
+.btn:focus-visible,.opt:focus-visible,.ghost:focus-visible{outline:3px solid var(--steel);outline-offset:2px}
+.ghost{background:none;border:0;color:var(--muted);font:600 15px var(--body);cursor:pointer;padding:6px 0;align-self:flex-start}
+.ghost:hover{color:var(--ink)}
+.meta{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-family:var(--mono);font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.meta b{color:var(--steel)}
+.track{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.track i{display:block;height:100%;background:var(--accent);transition:width .3s ease}
+.q{font-size:22px;font-weight:700;line-height:1.3;text-wrap:balance}
+.how{font-size:15px;color:var(--muted);margin-top:-8px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{text-align:left;font:400 17px/1.35 var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:14px 16px;cursor:pointer;display:flex;gap:12px;align-items:flex-start}
+.opt:hover{border-color:var(--steel)}
+.opt[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.opt .k{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:3px;min-width:1.2em}
+.score{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.score .n{font-family:var(--mono);font-weight:700;font-size:clamp(64px,18vw,96px);line-height:1;font-variant-numeric:tabular-nums}
+.score .of{font-family:var(--mono);color:var(--muted);font-size:20px}
+.band{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:18px;padding:4px 10px;border-radius:3px;color:var(--accent-ink)}
+.bars{display:flex;flex-direction:column;gap:12px}
+.bar{display:grid;grid-template-columns:96px 1fr 44px;gap:12px;align-items:center}
+.bar .l{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:16px}
+.bar .v{font-family:var(--mono);font-size:14px;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+.bar .t{height:10px;background:var(--line);border-radius:2px;overflow:hidden}
+.bar .t i{display:block;height:100%}
+.focus{border-left:4px solid var(--accent);padding-left:14px;display:flex;flex-direction:column;gap:6px}
+.focus .lab{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.cta{background:var(--steel);color:var(--bg);border-radius:6px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.cta h2{color:var(--bg)}
+.cta .kw{font-family:var(--mono);font-weight:700;background:var(--bg);color:var(--ink);padding:2px 8px;border-radius:3px}
+.small{font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.track i{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="brand">Sharper Training</div>
+
+  <section id="intro" class="card">
+    <h1>Your Future-<span>Proof</span> Score</h1>
+    <p class="lede">Ten quick questions for men 45–65. Find out how ready your body is for the next 20 years, and which area to work on first.</p>
+    <ul class="pillars"><li>Strength</li><li>Mobility</li><li>Balance</li><li>Engine</li><li>Recovery</li></ul>
+    <p class="small">Takes about 2 minutes. Answer honestly. Nobody sees this but you.</p>
+    <button class="btn" id="start">Start the test</button>
+  </section>
+
+  <section id="quiz" class="card" hidden>
+    <div class="meta"><span>Question <b id="qn">1</b> of 10</span><span id="pillar">Strength</span></div>
+    <div class="track"><i id="prog" style="width:0%"></i></div>
+    <p class="q" id="qtext"></p>
+    <p class="how" id="qhow"></p>
+    <div class="opts" id="opts"></div>
+    <button class="ghost" id="back">← Back</button>
+  </section>
+
+  <section id="result" hidden>
+    <div class="card">
+      <div class="meta"><span>Your result</span><span>Future-Proof Score</span></div>
+      <div class="score"><span class="n" id="sc">0</span><span class="of">/ 100</span><span class="band" id="band"></span></div>
+      <p id="bandtext"></p>
+      <div class="bars" id="bars"></div>
+      <div class="focus">
+        <span class="lab">Start here</span>
+        <strong id="ftitle"></strong>
+        <p id="ftext"></p>
+      </div>
+      <button class="ghost" id="again">↻ Take the test again</button>
+    </div>
+    <div class="cta" style="margin-top:20px">
+      <h2>Want a plan for your score?</h2>
+      <p>DM <span class="kw">FUTURE</span> to Sharper Training on Instagram and tell me your number. I'll send you the first steps for your weakest area.</p>
+      <p style="font-size:14px;opacity:.85">I am with you, mate. — Greg</p>
+    </div>
+    <p class="small" style="margin-top:16px">This is a self-check, not a medical assessment. If you have pain, a heart condition or a recent injury, speak to your GP before starting a new exercise programme.</p>
+  </section>
+</div>
+
+<script>
+const Q=[
+ {p:"Strength",q:"Sit cross-legged on the floor, then stand up. What do you need?",h:"Try it now if you can, on a soft surface.",o:["I can't get down or up without real help","Both hands and a knee, or a chair","One hand or one knee","Nothing. Down and up, no hands"]},
+ {p:"Strength",q:"How often do you lift weights or do resistance training?",o:["Never","Now and then, no routine","Once a week","Twice a week or more"]},
+ {p:"Mobility",q:"Can you sit in a deep squat, heels down, and hold it for 30 seconds?",o:["No, nowhere near","Only holding onto something","Yes, but it's a struggle","Yes, comfortably"]},
+ {p:"Mobility",q:"Reach one hand over your shoulder and the other up your back. How close do your fingers get?",h:"Check both sides and answer for your worse side.",o:["Big gap, and it's painful","More than a hand's width apart","Within a hand's width","Fingers touch"]},
+ {p:"Balance",q:"Stand on one leg with your eyes open. How long can you hold it?",h:"Answer for your weaker leg.",o:["Under 5 seconds","5–10 seconds","10–30 seconds","30 seconds or more"]},
+ {p:"Balance",q:"In the last year, how often have you tripped, stumbled or nearly fallen?",o:["I've had a fall","Several times","Once or twice","Not at all"]},
+ {p:"Engine",q:"Walk up three flights of stairs at a normal pace. How do you feel at the top?",o:["I have to stop on the way","Breathless, can't talk","Puffed, but can talk","Fine, could keep going"]},
+ {p:"Engine",q:"In a typical week, how much exercise gets you out of breath?",o:["None","Under an hour","1–2.5 hours","More than 2.5 hours"]},
+ {p:"Recovery",q:"How do you usually sleep?",o:["Badly, most nights","Under 6 hours or often broken","6–7 hours, mostly OK","7+ hours, wake up fresh"]},
+ {p:"Recovery",q:"How stiff or achy are you when you get out of bed?",o:["Very, every day","Stiff for the first hour","A bit, it goes quickly","Rarely or never"]}
+];
+const P=["Strength","Mobility","Balance","Engine","Recovery"];
+const TIPS={
+ Strength:["Rebuild your strength","Strength is what keeps you independent. Start with two short sessions a week: squats to a chair, push-ups against a wall or bench, and a carry. Add a little each week."],
+ Mobility:["Get your range back","Stiff hips and shoulders turn into aches and injuries. Ten minutes a day of deep squat holds, hip openers and shoulder work will change how you move within a month."],
+ Balance:["Train your balance","Balance fades quietly and you only notice when you fall. Practise standing on one leg while you brush your teeth, then progress to eyes closed."],
+ Engine:["Build your engine","Your heart and lungs need regular work. Start with brisk walks where you're slightly out of breath, and build to a couple of harder efforts a week."],
+ Recovery:["Fix your recovery","Training only works if you recover from it. Protect your sleep: same bedtime, no screens for the last half hour, and a short wind-down routine."]
+};
+const BANDS=[
+ [90,"Future-proof","var(--good)","You're in great shape for your age. The job now is to keep it, and to keep pushing your weakest area."],
+ [70,"Solid base","var(--good)","You've got a good foundation. A few targeted changes will keep you strong and moving well for decades."],
+ [40,"Holding on","var(--warn)","You're getting by, but some areas are slipping. This is the best time to act, before small problems become big ones."],
+ [0,"Act now","var(--bad)","Your body is telling you it needs attention. The good news: you'll feel the difference quickly once you start."]
+];
+let i=0, ans=Array(Q.length).fill(null);
+const $=id=>document.getElementById(id);
+function show(s){["intro","quiz","result"].forEach(x=>$(x).hidden=x!==s)}
+function render(){
+  const q=Q[i];
+  $("qn").textContent=i+1; $("pillar").textContent=q.p;
+  $("prog").style.width=(i/Q.length*100)+"%";
+  $("qtext").textContent=q.q;
+  $("qhow").textContent=q.h||""; $("qhow").hidden=!q.h;
+  const box=$("opts"); box.innerHTML="";
+  q.o.forEach((t,v)=>{
+    const b=document.createElement("button");
+    b.className="opt"; b.id="opt-"+i+"-"+v;
+    b.setAttribute("aria-pressed",ans[i]===v?"true":"false");
+    b.innerHTML='<span class="k">'+String.fromCharCode(65+v)+'</span><span></span>';
+    b.lastChild.textContent=t;
+    b.onclick=()=>{ans[i]=v; if(i<Q.length-1){i++;render()}else finish()};
+    box.appendChild(b);
+  });
+  $("back").hidden=i===0;
+}
+function finish(){
+  const total=ans.reduce((a,b)=>a+b,0);
+  const score=Math.round(total/(Q.length*3)*100);
+  const per={}; P.forEach(p=>per[p]=0);
+  Q.forEach((q,k)=>per[q.p]+=ans[k]);
+  $("sc").textContent=score;
+  const b=BANDS.find(x=>score>=x[0]);
+  $("band").textContent=b[1]; $("band").style.background=b[2]; $("bandtext").textContent=b[3];
+  const bars=$("bars"); bars.innerHTML="";
+  P.forEach(p=>{
+    const pct=Math.round(per[p]/6*100);
+    const col=pct>=70?"var(--good)":pct>=40?"var(--warn)":"var(--bad)";
+    const r=document.createElement("div"); r.className="bar";
+    r.innerHTML='<span class="l">'+p+'</span><span class="t"><i style="width:'+pct+'%;background:'+col+'"></i></span><span class="v">'+pct+'</span>';
+    bars.appendChild(r);
+  });
+  const weak=P.reduce((a,p)=>per[p]<per[a]?p:a,P[0]);
+  $("ftitle").textContent=TIPS[weak][0]; $("ftext").textContent=TIPS[weak][1];
+  show("result"); window.scrollTo(0,0);
+}
+$("start").onclick=()=>{i=0;show("quiz");render()};
+$("back").onclick=()=>{if(i>0){i--;render()}};
+$("again").onclick=()=>{ans=Array(Q.length).fill(null);i=0;show("quiz");render()};
+</script>
+</body>
+</html>
