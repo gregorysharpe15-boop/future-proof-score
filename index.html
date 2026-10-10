@@ -72,6 +72,12 @@ p{margin:0}
 .cta h2{color:var(--bg)}
 .cta .kw{font-family:var(--mono);font-weight:700;background:var(--bg);color:var(--ink);padding:2px 8px;border-radius:3px}
 .small{font-size:13px;color:var(--muted)}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:520px){.fields{grid-template-columns:1fr}}
+.fields label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:15px;min-width:0}
+.fields input{font:400 17px var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:12px 14px;width:100%}
+.fields input:focus-visible{outline:3px solid var(--steel);outline-offset:1px}
+.btn:disabled{opacity:.6;cursor:default}
 @media (prefers-reduced-motion:reduce){.track i{transition:none}}
 </style>
 </head>
@@ -110,6 +116,19 @@ p{margin:0}
       </div>
       <button class="ghost" id="again">↻ Take the test again</button>
     </div>
+    <form class="card signup" id="signup" style="margin-top:20px" action="https://app.kit.com/forms/9976919/subscriptions" method="post" target="_blank">
+      <h2>Keep your score moving</h2>
+      <p>Join my email list for practical ways to stay strong and mobile after 45, starting with your weakest area. Unsubscribe any time.</p>
+      <div class="fields">
+        <label for="su-name">First name<input id="su-name" name="fields[first_name]" type="text" autocomplete="given-name" required></label>
+        <label for="su-email">Email<input id="su-email" name="email_address" type="email" autocomplete="email" required></label>
+      </div>
+      <input type="hidden" name="fields[quiz_score]" id="su-score">
+      <input type="hidden" name="fields[weakest_area]" id="su-weak">
+      <input type="hidden" name="fields[signup_source]" value="Future-Proof Score quiz">
+      <button class="btn" id="su-btn" type="submit">Send my results</button>
+      <p class="small" id="su-msg" role="status"></p>
+    </form>
     <div class="cta" style="margin-top:20px">
       <h2>Want a plan for your score?</h2>
       <p>DM <span class="kw">FUTURE</span> to Sharper Training on Instagram and tell me your number. I'll send you the first steps for your weakest area.</p>
@@ -185,8 +204,22 @@ function finish(){
   });
   const weak=P.reduce((a,p)=>per[p]<per[a]?p:a,P[0]);
   $("ftitle").textContent=TIPS[weak][0]; $("ftext").textContent=TIPS[weak][1];
+  $("su-score").value=score; $("su-weak").value=weak;
   show("result"); window.scrollTo(0,0);
 }
+$("signup").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const f=e.target, btn=$("su-btn"), msg=$("su-msg");
+  btn.disabled=true; msg.textContent="Sending…";
+  try{
+    await fetch(f.action,{method:"POST",body:new FormData(f),mode:"no-cors"});
+    f.querySelector(".fields").hidden=true; btn.hidden=true;
+    msg.textContent="Done. Check your inbox (and your spam folder) for an email from Greg at Sharper Training.";
+  }catch(err){
+    btn.disabled=false;
+    msg.textContent="That didn't go through. Check your connection and try again.";
+  }
+});
 $("start").onclick=()=>{i=0;show("quiz");render()};
 $("back").onclick=()=>{if(i>0){i--;render()}};
 $("again").onclick=()=>{ans=Array(Q.length).fill(null);i=0;show("quiz");render()};
