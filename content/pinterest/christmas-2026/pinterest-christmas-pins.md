@@ -8,7 +8,7 @@ Post 1–2 a day, newest first. Don't post all 6 at once.
 
 ## 1. pin-strong-at-70.png
 Board: Christmas Gifts for Men Over 50
-Title: 12 Christmas Gifts for the Dad Who Wants to Be Strong at 70
+Title: 17 Christmas Gifts for the Dad Who Wants to Be Strong at 70
 Description: A coach's picks for dads over 50: kit for strength, balance and recovery that he'll actually use, not leave in the loft. Chosen by Greg Sharpe, Sharper Training. #ad As an Amazon Associate I earn from qualifying purchases.
 Link: https://gregorysharpe15-boop.github.io/future-proof-score/gifts/
 
