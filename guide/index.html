@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Travel-Proof Training Guide · Sharper Training</title>
+<meta name="description" content="Free 6-page guide for executives who travel: stay strong, sharp and capable on the road in 20 minutes. Hotel rooms, long-haul flights, client dinners. No gym needed.">
+<meta property="og:title" content="The Travel-Proof Training Guide (free)">
+<meta property="og:description" content="Stay strong and sharp on the road in 20 minutes. Hotel rooms, flights, client dinners. No gym needed. By Greg Sharpe, Sharper Training.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#13222C;--copper:#CD9A63;--copper-d:#A0703F;--cream:#F4F3EF;--muted:#5B6870;--teal:#6FA3B3}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,system-ui,sans-serif;background:var(--cream);color:var(--navy);line-height:1.55}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{background:var(--navy);color:#fff;padding:48px 0 56px}
+.kick{color:var(--copper);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin-top:12px}
+.lead{color:#d9e1e6;margin-top:16px;max-width:52ch;font-size:1.05rem}
+.grid{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;margin-top:-28px;padding-bottom:56px}
+.card{background:#fff;border:1px solid #e3e0d8;border-radius:18px;padding:28px}
+h2{font-size:1.25rem;margin-bottom:12px}
+ul{list-style:none}
+li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid #eee}
+li:last-child{border-bottom:0}
+li::before{content:"";position:absolute;left:4px;top:17px;width:12px;height:12px;border:3px solid var(--copper);transform:rotate(45deg)}
+label{display:block;font-size:.85rem;font-weight:600;margin-top:14px}
+input{width:100%;margin-top:6px;padding:13px 14px;border:1px solid #cfcac0;border-radius:10px;font:inherit}
+.btn{display:block;width:100%;margin-top:18px;background:var(--copper);color:var(--navy);border:0;border-radius:12px;padding:15px;font:600 1rem Poppins,sans-serif;cursor:pointer;text-align:center;text-decoration:none}
+.btn:hover{background:#d8a874}
+.small{font-size:.8rem;color:var(--muted);margin-top:12px}
+#done{display:none}
+#done h2{color:var(--copper-d)}
+.about{margin-top:20px;font-size:.92rem;color:#33434c}
+footer{padding:0 0 40px;color:var(--muted);font-size:.85rem}
+@media (max-width:760px){.grid{grid-template-columns:1fr;margin-top:-20px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="kick">Free guide for executives who travel</div>
+  <h1>The Travel-Proof Training Guide</h1>
+  <p class="lead">How to stay strong, sharp and capable on the road. Hotel rooms, long-haul flights, client dinners. 20 minutes, no gym needed.</p>
+</div></header>
+
+<main class="wrap grid">
+  <div class="card">
+    <h2>What's inside (6 pages)</h2>
+    <ul>
+      <li><b>The 20-Minute Rule:</b> the minimum that keeps you strong, wherever you wake up</li>
+      <li><b>The Sharper 4:</b> movement, nutrition, mindfulness and consistency, built for life on the road</li>
+      <li><b>Hotel room sessions</b> you can do on a bit of carpet before the first call</li>
+      <li><b>Airport, flight and client-dinner rules</b> that don't feel like a diet</li>
+    </ul>
+    <p class="about">By Greg Sharpe. 20+ years leading global brand and events teams, a life of flights and late dinners. Now 51, still training, and coaching executives in London and the US whose programmes travel with them.</p>
+  </div>
+
+  <div class="card">
+    <form id="get" action="https://app.kit.com/forms/9976919/subscriptions" method="post" target="kit-frame">
+      <h2>Where shall I send it?</h2>
+      <p class="small" style="margin-top:0">Pop your details in and the guide opens straight away. I'll also send you the odd practical email. Unsubscribe any time.</p>
+      <label for="n">First name<input id="n" name="fields[first_name]" type="text" autocomplete="given-name" required></label>
+      <label for="e">Work or personal email<input id="e" name="email_address" type="email" autocomplete="email" required></label>
+      <input type="hidden" name="fields[signup_source]" value="Travel-Proof Guide">
+      <button class="btn" type="submit">Get the free guide</button>
+      <p class="small">Not medical advice. If you have an injury or a heart or blood-pressure condition, check with your GP before starting.</p>
+    </form>
+    <div id="done">
+      <h2>It's yours, <span id="who">mate</span>.</h2>
+      <p>Your guide is open in a new tab. If not, tap below.</p>
+      <a class="btn" href="Travel-Proof-Training-Guide.pdf" target="_blank" rel="noopener">Open the guide (PDF)</a>
+      <p class="about">Want a plan built around your travel diary? Book a free 20-minute Travel-Proof Strategy Call.</p>
+      <a class="btn" style="background:var(--navy);color:#fff" href="https://calendly.com/gregorysharpe15/travel-proof-strategy-call-20-mins" target="_blank" rel="noopener">Book the free call</a>
+    </div>
+  </div>
+</main>
+<iframe name="kit-frame" title="signup" style="display:none"></iframe>
+<footer class="wrap">© Sharper Training · Richmond, London · <a href="https://www.instagram.com/sharper_training/" style="color:inherit">@sharper_training</a></footer>
+
+<script>
+document.getElementById('get').addEventListener('submit', function () {
+  var name = document.getElementById('n').value.trim();
+  if (name) document.getElementById('who').textContent = name;
+  window.open('Travel-Proof-Training-Guide.pdf', '_blank');
+  setTimeout(function () {
+    document.getElementById('get').style.display = 'none';
+    document.getElementById('done').style.display = 'block';
+  }, 300);
+});
+</script>
+</body>
+</html>
