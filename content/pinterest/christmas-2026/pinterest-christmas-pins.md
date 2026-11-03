@@ -1,6 +1,6 @@
 # Pinterest Christmas pins: copy to paste
 
-12 pins, all Christmas-themed. Each one links to the matching section of your Christmas gift page, which carries your Amazon affiliate links.
+11 pins, all Christmas-themed. Each one links to the matching section of your Christmas gift page, which carries your Amazon affiliate links.
 Every description already ends with the #ad / Amazon Associates line. Keep it in.
 
 ## Posting plan (1–2 a day, from Mon 9 Nov)
@@ -12,10 +12,10 @@ Every description already ends with the #ad / Amazon Associates line. Keep it in
 | Wed 11 Nov | 4. Hotel-room gym |
 | Thu 12 Nov | 5. Stiff back · 6. Won't go to a gym |
 | Fri 13 Nov | 7. Grip strength |
-| Sat 14 Nov | 8. Walks the dog · 9. Old rugby knees |
-| Sun 15 Nov | 10. Still runs |
-| Mon 16 Nov | 11. Calm corner |
-| Tue 17 Nov | 12. Secret Santa |
+| Sat 14 Nov | 8. Walks the dog |
+| Sun 15 Nov | 9. Still runs |
+| Mon 16 Nov | 10. Calm corner |
+| Tue 17 Nov | 11. Secret Santa |
 
 Then repost the top 3 performers again on Black Friday (27 Nov) and in mid-December.
 
@@ -69,25 +69,19 @@ Title: Christmas Gifts for the Dad Who Walks the Dog
 Description: Turn the winter dog walk into training: a weighted vest, a rucking backpack and a head torch for the dark December evenings. A coach's picks. #ad As an Amazon Associate I earn from qualifying purchases.
 Link: https://gregorysharpe15-boop.github.io/future-proof-score/gifts/#walk
 
-## 9. pin-rugby-dad.png
-Board: Christmas Gifts for Men Over 50
-Title: Christmas Gifts for the Dad With Old Rugby Knees
-Description: From one ex-Richmond player: knee sleeves, a hot and cold wrap, and a proper ball for the Boxing Day game in the garden. #ad As an Amazon Associate I earn from qualifying purchases.
-Link: https://gregorysharpe15-boop.github.io/future-proof-score/gifts/#rugby
-
-## 10. pin-runner-dad.png
+## 9. pin-runner-dad.png
 Board: Christmas Gifts for Men Over 50
 Title: Christmas Gifts for the Dad Who Still Runs
 Description: Parkrun on Christmas morning? A hi-vis vest, a running belt and merino socks keep him out there through the dark winter months. #ad As an Amazon Associate I earn from qualifying purchases.
 Link: https://gregorysharpe15-boop.github.io/future-proof-score/gifts/#run
 
-## 11. pin-calm-corner.png
+## 10. pin-calm-corner.png
 Board: Christmas Gifts for Men Over 50
 Title: The Calm Corner: Christmas Gifts for a Quieter Head
 Description: Strong body, quiet mind. A meditation cushion, a fleece blanket, a sleep mask and a five-minute journal, for the man who needs ten minutes of peace. #ad As an Amazon Associate I earn from qualifying purchases.
 Link: https://gregorysharpe15-boop.github.io/future-proof-score/gifts/#calm
 
-## 12. pin-secret-santa.png
+## 11. pin-secret-santa.png
 Board: Stocking Fillers for Fit Dads
 Title: Secret Santa for the Gym Bloke, Under £20
 Description: Cheap, useful, and he'll actually use it: a massage ball, mini resistance bands, a grip trainer and a sleep mask. Picked by a strength coach. #ad As an Amazon Associate I earn from qualifying purchases.
