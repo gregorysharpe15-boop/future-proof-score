@@ -27,7 +27,7 @@ Sources: [magnet.me Twickenham companies](https://magnet.me/en/companies/twicken
 
 ### LinkedIn connection note (under 300 characters)
 
-> Hi [name], I'm a Richmond-based coach for men 40 to 65. I run a 60-minute team reset for Movember and Men's Day (19 Nov): breathing, mobility and an honest chat about "I'm fine". Happy to send the one-pager if useful. Greg
+> Hi [name], I'm a Richmond-based strength and mobility coach. I run a 60-minute wellbeing reset for whole teams, any age or fitness level: breathing, mobility and an honest chat about "I'm fine". Happy to send the one-pager if useful. Greg
 
 ### Message once connected (or as an InMail or email, sent by you)
 
