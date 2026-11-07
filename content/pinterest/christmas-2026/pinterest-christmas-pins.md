@@ -36,7 +36,7 @@ Link: https://gregorysharpe15-boop.github.io/future-proof-score/gifts/#home
 ## 3. pin-stocking-fillers.png
 Board: Stocking Fillers for Fit Dads
 Title: Stocking Fillers for Fit Dads Under £20
-Description: Small Christmas presents that actually get used: mini bands, a massage ball, a grip trainer, gym gloves and a training notebook. UK picks from a coach. #ad As an Amazon Associate I earn from qualifying purchases.
+Description: Small Christmas presents that actually get used: mini bands, a massage ball, a grip trainer and a training notebook. UK picks from a coach. #ad As an Amazon Associate I earn from qualifying purchases.
 Link: https://gregorysharpe15-boop.github.io/future-proof-score/gifts/#fillers
 
 ## 4. pin-travel-dad.png

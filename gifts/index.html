@@ -123,20 +123,20 @@ footer p+p{margin-top:8px}
 
 <script>
 const TAG = "sharpertraini-21";
-const az = q => `https://www.amazon.co.uk/s?k=${encodeURIComponent(q)}&tag=${TAG}`;
+const az = q => q.startsWith('dp/') ? `https://www.amazon.co.uk/${q}?tag=${TAG}` : `https://www.amazon.co.uk/s?k=${encodeURIComponent(q)}&tag=${TAG}`;
 
 const groups = [
  { id:"fillers", title:"Stocking fillers under £20", why:"Small, cheap, and they actually get used.", items:[
    ["Mini resistance bands","Around £10","Warm-ups, glute work, hotel rooms. <b>Coach's tip:</b> get a set of 3 or 5 strengths.","mini resistance loop bands set"],
    ["Massage ball","Under £15","Rolled under the foot or into tight shoulders in front of the telly.","massage ball spiky trigger point"],
    ["Grip trainer","Under £15","Grip strength fades early with age. This fixes it in minutes a day.","hand grip strengthener adjustable"],
-   ["Gym training gloves","Around £10–£20","For the man back on the bars and weights. Saves his hands, so he keeps turning up. <b>Coach's tip:</b> padded palm and a wrist strap. Snug, not tight.","gym gloves men padded palm wrist support"],
    ["Training notebook","Under £15","Writing workouts down is how men keep turning up. Low-tech, works.","workout log book fitness journal"],
  ]},
  { id:"home", title:"Home kit for men who won't go to a gym", why:"A full-body set-up in the spare room or the kitchen corner.", items:[
    ["Kettlebell","Under £50","Swings, squats, carries. <b>Coach's tip:</b> 12kg for most men starting out, 16kg if he already lifts.","cast iron kettlebell 12kg",true],
    ["Weighted vest","£30–£60","Turns the dog walk into training. Start light, around 5–10kg.","weighted vest 10kg"],
    ["Doorframe pull-up bar","Under £30","He doesn't need pull-ups. Hanging for 30 seconds a day is the win.","doorway pull up bar no screws"],
+   ["Under Armour training gloves","Around £21","For the man back on the bars and weights. Leather palm, half-finger, wrist strap. Saves his hands, so he keeps turning up. <b>Coach's tip:</b> snug, not tight.","dp/B093JQ7N92"],
    ["Exercise mat","Under £30","Thick enough for knees on a hard floor. Lives under the sofa.","exercise mat thick 10mm"],
  ]},
  { id:"recovery", title:"For the stiff back and tight hips", why:"Desk jobs, long drives and old rugby knees. These are what I recommend most.", items:[
