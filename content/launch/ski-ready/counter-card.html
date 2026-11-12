@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<style>
+@page{size:210mm 297mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;color:#13222C}
+.sheet{width:210mm;height:297mm;display:grid;grid-template-columns:105mm 105mm;grid-template-rows:148.5mm 148.5mm}
+.card{width:105mm;height:148.5mm;background:#13222C;color:#fff;padding:9mm 8mm 7mm;position:relative;overflow:hidden;outline:0.2mm dashed #9aa;outline-offset:-0.1mm;display:flex;flex-direction:column}
+.logo{height:8mm;width:auto;align-self:flex-start}
+.kick{margin-top:6mm;font-size:7pt;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#CD9A63}
+h1{font-size:21pt;line-height:1.05;margin-top:1.5mm;font-weight:700;letter-spacing:-.01em}
+h1 em{font-style:normal;color:#CD9A63}
+.sub{font-size:8.6pt;line-height:1.4;color:#d9e1e6;margin-top:3mm}
+.box{margin-top:auto;background:#F4F3EF;color:#13222C;border-radius:3.5mm;padding:4mm;display:flex;gap:4mm;align-items:center;position:relative;z-index:2}
+.box img{width:27mm;height:27mm;display:block}
+.box b{font-size:10pt;line-height:1.2;display:block}
+.box span{font-size:7.4pt;color:#5B6870;display:block;margin-top:1.5mm;line-height:1.35}
+.foot{font-size:6.6pt;color:#9fb0ba;margin-top:3mm;text-align:center;position:relative;z-index:2}
+.mtn{position:absolute;left:0;right:0;bottom:30mm;width:100%;height:30mm;z-index:1}
+</style></head><body>
+<div class="sheet" id="sheet"></div>
+<template id="t">
+  <div class="card">
+    <img class="logo" src="../../../brand/svg/sharper-training-logo-horizontal-dark.svg" alt="Sharper Training">
+    <div class="kick">Skiing this winter?</div>
+    <h1>Get your <em>knees</em> ready before you go.</h1>
+    <p class="sub">Knees are around 1 in 3 ski injuries (Nuffield Health). Five 1:1 sessions with Greg Sharpe, strength coach for 40 to 65s in Richmond.</p>
+    <svg class="mtn" viewBox="0 0 400 100" preserveAspectRatio="none"><path d="M0 100 L0 70 L60 25 L110 60 L170 5 L230 65 L280 35 L340 75 L400 40 L400 100Z" fill="#1B2F3B"/></svg>
+    <div class="box">
+      <img src="qr-ski-ready.svg" alt="QR code to the Ski-Ready page">
+      <div><b>Free 15-min Ski-Ready call</b><span>Scan to book. 5 × 1:1 sessions, £375.<br>Richmond or online.</span></div>
+    </div>
+    <div class="foot">sharpertraining.co.uk · @sharper_training</div>
+  </div>
+</template>
+<script>const s=document.getElementById('sheet'),t=document.getElementById('t');for(let i=0;i<4;i++)s.appendChild(t.content.cloneNode(true));</script>
+</body></html>

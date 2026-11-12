@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<style>
+:root{--navy:#13222C;--navy-2:#1B2F3B;--teal:#6FA3B3;--copper:#CD9A63;--copper-d:#A0703F;--cream:#F4F3EF;--muted:#5B6870}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;background:#888}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;padding:100px 96px;display:flex;flex-direction:column;margin-bottom:20px}
+.dark{background:var(--navy);color:#fff}
+.light{background:var(--cream);color:var(--navy)}
+.logo{height:56px;position:absolute;left:96px;bottom:84px}
+.pg{position:absolute;right:96px;bottom:92px;font-size:28px;font-weight:600;letter-spacing:.1em;opacity:.6}
+.kick{font-size:30px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--copper)}
+h1{font-size:132px;line-height:1.02;letter-spacing:-.02em;font-weight:700;margin-top:28px}
+h1 em,h2 em{font-style:normal;color:var(--copper)}
+h2{font-size:96px;line-height:1.05;letter-spacing:-.015em;font-weight:700;margin-top:24px}
+.body{font-weight:500;font-size:44px;line-height:1.4;margin-top:40px;max-width:24ch}
+.dark .body{color:#d9e1e6}.light .body{color:#33434c}
+.swipe{margin-top:auto;margin-bottom:120px;font-size:40px;font-weight:600;color:var(--teal)}
+.mtn{position:absolute;left:0;right:0;bottom:0;width:100%;height:330px}
+.big{font-size:300px;font-weight:700;line-height:.95;color:var(--copper-d);letter-spacing:-.03em;margin-top:60px}
+.src{margin-top:auto;margin-bottom:120px;font-size:28px;color:var(--muted)}
+.rows{margin-top:56px;display:grid;gap:28px}
+.row{background:var(--navy-2);border-radius:28px;padding:40px 44px}
+.row .l{font-size:30px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--teal)}
+.row .r{font-size:60px;font-weight:700;margin-top:8px;line-height:1.15}
+.row .r em{font-style:normal;color:var(--copper)}
+.num{width:150px;height:150px;border-radius:50%;background:var(--navy);color:var(--copper);display:grid;place-items:center;font-size:76px;font-weight:700}
+.how{margin-top:48px;display:grid;gap:22px}
+.how div{font-weight:500;font-size:42px;line-height:1.35;color:#33434c;padding-left:52px;position:relative}
+.how div::before{content:"";position:absolute;left:4px;top:20px;width:20px;height:20px;border:5px solid var(--copper);transform:rotate(45deg)}
+.why{font-weight:500;margin-top:auto;margin-bottom:120px;background:#fff;border-left:10px solid var(--copper);border-radius:0 24px 24px 0;padding:30px 36px;font-size:38px;line-height:1.35}
+.why b{color:var(--copper-d)}
+.ticket{margin-top:48px;background:var(--cream);color:var(--navy);border-radius:32px;border:5px dashed var(--copper-d);padding:44px;text-align:center}
+.ticket .amt{font-size:150px;font-weight:700;line-height:1}
+.ticket .w{font-size:44px;font-weight:600;margin-top:8px}
+.ticket .wh{font-size:36px;color:var(--muted);margin-top:4px}
+.q{margin-top:52px;font-size:54px;font-weight:700;line-height:1.2}
+.q em{font-style:normal;color:var(--copper)}
+.note{position:absolute;left:96px;right:96px;bottom:170px;font-size:28px;color:#9fb0ba}
+</style></head><body>
+
+<!-- 1 hook -->
+<section class="slide dark" id="s1">
+  <div class="kick">Skiing this winter?</div>
+  <h1>Booked the ski trip? <em>Your knees haven't.</em></h1>
+  <div class="body">3 moves to start this week, from a 51-year-old strength coach.</div>
+  <div class="swipe" style="margin:36px 0 0">Swipe →</div>
+  <svg class="mtn" viewBox="0 0 1080 330" preserveAspectRatio="none"><path d="M0 330 L0 210 L150 70 L260 160 L400 10 L540 190 L640 110 L780 230 L900 60 L1080 200 L1080 330Z" fill="#1B2F3B"/><path d="M400 10 L455 80 L425 72 L400 95 L372 70 L345 78Z M900 60 L950 125 L925 118 L900 140 L875 115 L850 120Z M150 70 L195 125 L170 120 L150 140 L130 118 L108 122Z" fill="#F4F3EF" opacity=".9"/><path d="M0 330 L0 290 L200 230 L380 280 L560 220 L760 285 L940 240 L1080 270 L1080 330Z" fill="#F4F3EF"/></svg>
+  
+</section>
+
+<!-- 2 stat -->
+<section class="slide light" id="s2">
+  <div class="kick" style="color:var(--copper-d)">The bit nobody trains for</div>
+  <div class="big">1 in 3</div>
+  <h2 style="font-size:78px">ski injuries are <em style="color:var(--copper-d)">knees.</em></h2>
+  <div class="body">The knee is the joint most often hurt on the slopes. Most of us train for nothing, then ski six hours a day.</div>
+  <div class="src">Source: Nuffield Health</div>
+  <img class="logo" src="../../../brand/svg/sharper-training-logo-horizontal-transparent.svg" onerror="this.style.display='none'">
+  <div class="pg">2/7</div>
+</section>
+
+<!-- 3 when -->
+<section class="slide dark" id="s3">
+  <div class="kick">When to start</div>
+  <h2>Start <em>6–8 weeks</em> before you go.</h2>
+  <div class="rows">
+    <div class="row"><div class="l">Skiing at Christmas</div><div class="r">Start <em>now</em></div></div>
+    <div class="row"><div class="l">Skiing at Feb half-term</div><div class="r">Start <em>by mid-December</em></div></div>
+  </div>
+  <div class="src" style="color:#9fb0ba">Timing advice: Nuffield Health</div>
+  <img class="logo" src="../../../brand/svg/sharper-training-logo-horizontal-dark.svg" onerror="this.style.display='none'">
+  <div class="pg">3/7</div>
+</section>
+
+<!-- 4 move 1 -->
+<section class="slide light" id="s4">
+  <div class="num">1</div>
+  <h2>Wall sit</h2>
+  <div class="how">
+    <div>Back flat on a wall, slide down until your thighs are as close to level as is comfy.</div>
+    <div>Hold 20–30 seconds. Build to 60.</div>
+    <div>3 rounds, 2–3 times a week.</div>
+  </div>
+  <div class="why"><b>Why:</b> thighs that last the whole run, not just the first one.</div>
+  <img class="logo" src="../../../brand/svg/sharper-training-logo-horizontal-transparent.svg" onerror="this.style.display='none'">
+  <div class="pg">4/7</div>
+</section>
+
+<!-- 5 move 2 -->
+<section class="slide light" id="s5">
+  <div class="num">2</div>
+  <h2>Side hop and stick</h2>
+  <div class="how">
+    <div>Hop sideways off one leg and land soft on the other.</div>
+    <div>Knee over your toes, not caving in. Hold the landing for 2 seconds.</div>
+    <div>6 each side. Start small, go further as it feels solid.</div>
+  </div>
+  <div class="why"><b>Why:</b> skiing is side to side. Your knees need to be ready for it.</div>
+  <img class="logo" src="../../../brand/svg/sharper-training-logo-horizontal-transparent.svg" onerror="this.style.display='none'">
+  <div class="pg">5/7</div>
+</section>
+
+<!-- 6 move 3 -->
+<section class="slide light" id="s6">
+  <div class="num">3</div>
+  <h2>One-leg hinge</h2>
+  <div class="how">
+    <div>Stand on one leg, soft knee. Tip forward from the hips, reach low, stand back up tall.</div>
+    <div>Hold a wall or chair at first if you need to.</div>
+    <div>8 each side, 2–3 rounds.</div>
+  </div>
+  <div class="why"><b>Why:</b> balance, plus strong hamstrings that back up your knee.</div>
+  <img class="logo" src="../../../brand/svg/sharper-training-logo-horizontal-transparent.svg" onerror="this.style.display='none'">
+  <div class="pg">6/7</div>
+</section>
+
+<!-- 7 CTA -->
+<section class="slide dark" id="s7">
+  <div class="kick">Ski-Ready with me</div>
+  <h2>5 sessions. <em>Ski the whole week.</em></h2>
+  <div class="ticket">
+    <div class="amt">£375</div>
+    <div class="w">5 × 1:1 before you go</div>
+    <div class="wh">Richmond or online · link in bio</div>
+  </div>
+  <div class="q">When are you off: <em>Christmas or half-term?</em> Tell me below 👇</div>
+  <div class="note">Sore knee right now? See your physio or GP first.</div>
+  <img class="logo" src="../../../brand/svg/sharper-training-logo-horizontal-dark.svg" onerror="this.style.display='none'">
+  <div class="pg">7/7</div>
+</section>
+
+</body></html>
